@@ -1,0 +1,17 @@
+/* Add custom styles here */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Customize further as needed */
