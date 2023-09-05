@@ -27,30 +27,32 @@ body {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: #ddd;
+    color: #333;
     border: none;
     cursor: pointer;
+    border-radius: 20px; /* Rounded corners for buttons */
+}
+
+/* Active filter button */
+.active {
+    background-color: #3498db;
+    color: #fff;
 }
 
 /* Gallery grid */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-}
-
 .image-item {
-    padding: 15px;
     box-sizing: border-box;
+    text-align: center; /* Center align the image and description */
 }
 
 .image-item img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #ddd;
+    border: 5px solid #ddd;
     transition: transform 0.2s;
     cursor: pointer;
+    border-radius: 10px; /* Rounded corners for images */
 }
 
 .image-item img:hover {
@@ -73,21 +75,22 @@ body {
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 80%;
-    max-height: 80vh; /* Set a maximum height for the modal content */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
 }
 
 .image-container {
-    text-align: center; /* Center the image horizontally */
+    text-align: center;
     padding: 20px 0;
 }
 
 .modal-image {
-    max-width: 100%; /* Ensure the image does not exceed the modal content width */
-    height: auto; /* Allow the image to adjust its height proportionally */
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 10px; /* Rounded corners for modal image */
 }
 
 .close {
@@ -118,21 +121,12 @@ body {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .filter-buttons {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
     .filter-button {
         margin: 0 5px;
     }
 
-    .row {
-        margin: 0 -10px;
-    }
-
     .image-item {
-        flex: 0 0 50%;
-        padding: 10px;
+        flex: 0 0 100%; /* Full-width on mobile */
+        margin: 10px 0; /* Adjust margin for mobile */
     }
 }
